@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StockPulse: Market Predictor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="stock-bg"></div>
+
+    <div id="root">
+        <div class="container">
+            <h1>StockPulse: Market Predictor</h1>
+
+            <div class="market-summary">
+                <div class="ticker-tape">
+                    <div class="ticker-item">SENSEX <span class="up">▲ 1.2%</span></div>
+                    <div class="ticker-item">NIFTY <span class="down">▼ 0.8%</span></div>
+                    <div class="ticker-item">USD/INR <span class="up">▲ 0.3%</span></div>
+                    
+                </div>
+            </div>
+
+            <div class="stock-selector-container">
+                <svg class="market-icon bull-icon"><use xlink:href="#bull"></use></svg>
+                <select class="stock-selector">
+                    <option>Select a stock</option>
+                    <option>TCS</option>
+                    <option>TATAMOTORS</option>
+                    <option>SUNPHARMA</option>
+                    <option>RELIANCE</option>
+                    <option>ITC</option>
+                    <option>INFY</option>
+                    <option>ICICIBANK</option>
+                    <option>HINDUNILVR</option>
+                    <option>HDFCBANK</option>
+                    <option>ADANIPOWER</option>
+                </select>
+                <svg class="market-icon bear-icon"><use xlink:href="#bear"></use></svg>
+            </div>
+
+            <div id="chart-container" class="chart-container"></div>
+
+            <div id="prediction" class="prediction"></div>
+
+            <div class="market-insights">
+                <h2>Market Insights</h2>
+                <ul id="insights-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader" class="loader">
+        <svg class="loader-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45"></circle>
+        </svg>
+        Initializing StockPulse...
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="bull" viewBox="0 0 100 100">
+            <path d="M50 10 L60 30 L80 35 L65 55 L70 75 L50 65 L30 75 L35 55 L20 35 L40 30 Z" fill="#00ff88"/>
+            <circle cx="35" cy="30" r="3" fill="#0a192f"/>
+            <circle cx="65" cy="30" r="3" fill="#0a192f"/>
+        </symbol>
+        <symbol id="bear" viewBox="0 0 100 100">
+            <path d="M50 10 L70 25 L80 45 L70 65 L50 80 L30 65 L20 45 L30 25 Z" fill="#ff4136"/>
+            <circle cx="35" cy="35" r="3" fill="#0a192f"/>
+            <circle cx="65" cy="35" r="3" fill="#0a192f"/>
+        </symbol>
+    </svg>
+
+    <script src="index.js"></script>
+</body>
+</html>

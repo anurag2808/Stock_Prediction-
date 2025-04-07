@@ -1,0 +1,33 @@
+.App {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+#result p {
+  margin: 5px 0;
+}
